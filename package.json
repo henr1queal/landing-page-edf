@@ -1,0 +1,23 @@
+{
+  "name": "kelly",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henr1queal/landing-page-edf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henr1queal/landing-page-edf/issues"
+  },
+  "homepage": "https://github.com/henr1queal/landing-page-edf#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "description": ""
+}
