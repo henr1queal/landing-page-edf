@@ -1,0 +1,225 @@
+/* Import da fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+/* Configuração do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /*
+    O .dark aqui está definindo o tema principal da sua página.
+    Alterei as variáveis --primary e --accent para os novos tons de roxo.
+  */
+  .dark {
+    --background: hsl(224, 71%, 4%);
+    /* Um azul quase preto para o fundo */
+    --foreground: hsl(210, 40%, 98%);
+    /* Texto principal (branco/cinza claro) */
+
+    --card: hsl(224, 71%, 6%);
+    /* Cor dos cards um pouco mais clara que o fundo */
+    --card-foreground: hsl(210, 40%, 98%);
+
+    /* --- ✨ AQUI ESTÁ A MUDANÇA PRINCIPAL ✨ --- */
+    --primary: 281, 100%, 49%;
+    /* Roxo Principal: #a300fd */
+    --primary-foreground: hsl(0, 0%, 100%);
+    /* Texto sobre o roxo (branco) */
+    --primary-glow: 281, 100%, 65%;
+    /* Um tom de roxo mais claro para o efeito "glow" */
+
+    --accent: hsl(281, 100%, 90%);
+    /* Um roxo bem claro para detalhes sutis */
+    --accent-foreground: hsl(281, 100%, 49%);
+
+    --secondary: hsl(217, 33%, 17%);
+    --secondary-foreground: hsl(210, 40%, 98%);
+
+    --muted: hsl(217, 33%, 25%);
+    --muted-foreground: hsl(215, 20%, 65%);
+
+    --destructive: hsl(0, 84%, 60%);
+    --destructive-foreground: hsl(0, 0%, 100%);
+
+    --border: hsl(217, 33%, 17%);
+    --input: hsl(217, 33%, 17%);
+    --ring: hsl(281, 100%, 49%);
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-tight;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+/* Animações e gradientes customizados com a nova cor */
+.bg-gradient-hero {
+  background-image: linear-gradient(135deg, hsl(281deg 100% 21.73%), #9c0084);
+}
+
+
+.bg-gradient-section {
+  background-image: linear-gradient(180deg, hsl(var(--background)), hsl(224, 71%, 2%));
+}
+
+.shadow-lift {
+  box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 35px hsl(var(--primary) / 0.7);
+  }
+}
+
+/* Classes de apoio para a cor customizada, se necessário */
+.text-custom-purple {
+  color: #c511a9;
+}
+
+.bg-custom-purple {
+  background-color: #9c0084;
+}
+
+.whatsapp-button {
+  background-image: linear-gradient(135deg, #ff47d1, #ff1493);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.whatsapp-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Garanta que este código exista no seu style.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-load {
+  opacity: 0;
+  /* Começa invisível */
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Adicione este código ao final do seu style.css */
+
+/* Define a animação para entrar da esquerda */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define a animação para entrar da direita */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estado inicial dos elementos que serão animados */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+/* Classe que aplica a animação da esquerda quando o elemento fica visível */
+.is-visible.from-left {
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Classe que aplica a animação da direita quando o elemento fica visível */
+.is-visible.from-right {
+  animation: fadeInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
