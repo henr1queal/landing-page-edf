@@ -1,4 +1,7 @@
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+* {
+  line-height: 110%
+}
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
