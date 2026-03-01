@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 * {
   line-height: 110%
@@ -12,6 +13,7 @@
       "Courier New", monospace;
     --color-green-900: oklch(39.3% 0.095 152.535);
     --color-cyan-900: oklch(39.8% 0.07 227.392);
+    --color-purple-300: oklch(70.7% 0.193 292.7);
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-purple-900: oklch(38.1% 0.176 304.987);
     --color-pink-600: oklch(59.2% 0.249 0.584);
