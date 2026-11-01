@@ -1,4 +1,12 @@
 @import "tailwindcss";
+
+/* Paleta oficial da marca */
+@theme {
+  --color-brand: #6A0954;   /* Roxo profundo: topo, rodapé, títulos */
+  --color-accent: #A22486;  /* Magenta: botões de ação, destaques, ícones */
+  --color-lilac: #EADAE7;   /* Lilás claro: fundos de seções secundárias */
+  --color-ink: #1A1A1A;     /* Grafite: texto corrido */
+}
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 * {
   line-height: 110%
@@ -1097,11 +1105,11 @@
     --foreground: hsl(210, 40%, 98%);
     --card: hsl(224, 71%, 6%);
     --card-foreground: hsl(210, 40%, 98%);
-    --primary: 281, 100%, 49%;
+    --primary: 315, 64%, 39%;
     --primary-foreground: hsl(0, 0%, 100%);
-    --primary-glow: 281, 100%, 65%;
-    --accent: hsl(281, 100%, 90%);
-    --accent-foreground: hsl(281, 100%, 49%);
+    --primary-glow: 315, 64%, 55%;
+    --accent: hsl(315, 40%, 90%);
+    --accent-foreground: hsl(315, 64%, 39%);
     --secondary: hsl(217, 33%, 17%);
     --secondary-foreground: hsl(210, 40%, 98%);
     --muted: hsl(217, 33%, 25%);
@@ -1110,7 +1118,7 @@
     --destructive-foreground: hsl(0, 0%, 100%);
     --border: hsl(217, 33%, 17%);
     --input: hsl(217, 33%, 17%);
-    --ring: hsl(281, 100%, 49%);
+    --ring: hsl(315, 64%, 39%);
     --radius: 0.5rem;
   }
 }
@@ -1121,6 +1129,9 @@
   img {
     height: auto;
     max-width: 100%;
+  }
+  body {
+    color: #1A1A1A;
   }
   h1, h2, h3, h4, h5, h6 {
     --tw-leading: var(--leading-tight);
@@ -1135,10 +1146,10 @@
   }
 }
 .bg-gradient-hero {
-  background-image: linear-gradient(135deg, hsl(281deg 100% 21.73%), #9c0084);
+  background-image: linear-gradient(135deg, #6A0954, #85156b);
 }
 .bg-gradient-section {
-  background-image: linear-gradient(180deg, hsl(var(--background)), hsl(224, 71%, 2%));
+  background-color: #EADAE7;
 }
 .shadow-lift {
   box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
@@ -1181,13 +1192,13 @@
   }
 }
 .text-custom-purple {
-  color: #c511a9;
+  color: #A22486;
 }
 .bg-custom-purple {
-  background-color: #9c0084;
+  background-color: #6A0954;
 }
 .whatsapp-button {
-  background-image: linear-gradient(135deg, #ff47d1, #ff1493);
+  background-image: linear-gradient(135deg, #A22486, #8a1b70);
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;

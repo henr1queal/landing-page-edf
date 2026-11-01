@@ -12,7 +12,6 @@
     --color-cyan-900: oklch(39.8% 0.07 227.392);
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-purple-900: oklch(38.1% 0.176 304.987);
-    --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-black: #000;
@@ -58,6 +57,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-brand: #6A0954;
+    --color-accent: #A22486;
   }
 }
 @layer base {
@@ -517,11 +518,14 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-green-900 {
-    background-color: var(--color-green-900);
+  .bg-brand {
+    background-color: var(--color-brand);
   }
   .bg-purple-900 {
     background-color: var(--color-purple-900);
@@ -531,10 +535,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-gradient-to-bl {
-    --tw-gradient-position: to bottom left in oklab;
-    background-image: linear-gradient(var(--tw-gradient-stops));
   }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
@@ -551,21 +551,17 @@
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-pink-500 {
-    --tw-gradient-from: var(--color-pink-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-purple-600\/60 {
-    --tw-gradient-from: color-mix(in srgb, oklch(55.8% 0.288 302.321) 60%, transparent);
+  .from-brand\/60 {
+    --tw-gradient-from: color-mix(in srgb, #6A0954 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-from: color-mix(in oklab, var(--color-purple-600) 60%, transparent);
+      --tw-gradient-from: color-mix(in oklab, var(--color-brand) 60%, transparent);
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-purple-600\/70 {
-    --tw-gradient-from: color-mix(in srgb, oklch(55.8% 0.288 302.321) 70%, transparent);
+  .from-brand\/70 {
+    --tw-gradient-from: color-mix(in srgb, #6A0954 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-from: color-mix(in oklab, var(--color-purple-600) 70%, transparent);
+      --tw-gradient-from: color-mix(in oklab, var(--color-brand) 70%, transparent);
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
@@ -577,22 +573,18 @@
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
-  .to-pink-600\/60 {
-    --tw-gradient-to: color-mix(in srgb, oklch(59.2% 0.249 0.584) 60%, transparent);
+  .to-accent\/60 {
+    --tw-gradient-to: color-mix(in srgb, #A22486 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-to: color-mix(in oklab, var(--color-pink-600) 60%, transparent);
+      --tw-gradient-to: color-mix(in oklab, var(--color-accent) 60%, transparent);
     }
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .to-pink-600\/70 {
-    --tw-gradient-to: color-mix(in srgb, oklch(59.2% 0.249 0.584) 70%, transparent);
+  .to-accent\/70 {
+    --tw-gradient-to: color-mix(in srgb, #A22486 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      --tw-gradient-to: color-mix(in oklab, var(--color-pink-600) 70%, transparent);
+      --tw-gradient-to: color-mix(in oklab, var(--color-accent) 70%, transparent);
     }
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-purple-600 {
-    --tw-gradient-to: var(--color-purple-600);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-transparent {
@@ -2178,11 +2170,11 @@
     --foreground: hsl(210, 40%, 98%);
     --card: hsl(224, 71%, 6%);
     --card-foreground: hsl(210, 40%, 98%);
-    --primary: 281, 100%, 49%;
+    --primary: 315, 64%, 39%;
     --primary-foreground: hsl(0, 0%, 100%);
-    --primary-glow: 281, 100%, 65%;
-    --accent: hsl(281, 100%, 90%);
-    --accent-foreground: hsl(281, 100%, 49%);
+    --primary-glow: 315, 64%, 55%;
+    --accent: hsl(315, 40%, 90%);
+    --accent-foreground: hsl(315, 64%, 39%);
     --secondary: hsl(217, 33%, 17%);
     --secondary-foreground: hsl(210, 40%, 98%);
     --muted: hsl(217, 33%, 25%);
@@ -2191,7 +2183,7 @@
     --destructive-foreground: hsl(0, 0%, 100%);
     --border: hsl(217, 33%, 17%);
     --input: hsl(217, 33%, 17%);
-    --ring: hsl(281, 100%, 49%);
+    --ring: hsl(315, 64%, 39%);
     --radius: 0.5rem;
   }
 }
@@ -2202,6 +2194,9 @@
   img {
     height: auto;
     max-width: 100%;
+  }
+  body {
+    color: #1A1A1A;
   }
   h1, h2, h3, h4, h5, h6 {
     --tw-leading: var(--leading-tight);
@@ -2216,10 +2211,10 @@
   }
 }
 .bg-gradient-hero {
-  background-image: linear-gradient(135deg, hsl(281deg 100% 21.73%), #9c0084);
+  background-image: linear-gradient(135deg, #6A0954, #85156b);
 }
 .bg-gradient-section {
-  background-image: linear-gradient(180deg, hsl(var(--background)), hsl(224, 71%, 2%));
+  background-color: #EADAE7;
 }
 .shadow-lift {
   box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.3);
@@ -2262,13 +2257,13 @@
   }
 }
 .text-custom-purple {
-  color: #c511a9;
+  color: #A22486;
 }
 .bg-custom-purple {
-  background-color: #9c0084;
+  background-color: #6A0954;
 }
 .whatsapp-button {
-  background-image: linear-gradient(135deg, #ff47d1, #ff1493);
+  background-image: linear-gradient(135deg, #A22486, #8a1b70);
   color: white;
   padding: 0.75rem 1.5rem;
   border: none;
