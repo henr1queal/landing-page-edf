@@ -1197,6 +1197,25 @@
 .bg-custom-purple {
   background-color: #6A0954;
 }
+.faq summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  color: #A22486;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.faq details[open] summary::after {
+  content: "\2212";
+}
 .hero-lead {
   font-size: 1.375rem;
   font-weight: 800;

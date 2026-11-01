@@ -538,6 +538,9 @@
   .bg-brand {
     background-color: var(--color-brand);
   }
+  .bg-lilac {
+    background-color: var(--color-lilac);
+  }
   .bg-purple-900 {
     background-color: var(--color-purple-900);
   }
@@ -617,6 +620,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
@@ -631,6 +637,9 @@
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -664,6 +673,9 @@
   }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
@@ -2286,6 +2298,25 @@
 }
 .bg-custom-purple {
   background-color: #6A0954;
+}
+.faq summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  color: #A22486;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.faq details[open] summary::after {
+  content: "\2212";
 }
 .hero-lead {
   font-size: 1.375rem;
