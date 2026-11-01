@@ -2262,6 +2262,16 @@
 .bg-custom-purple {
   background-color: #6A0954;
 }
+.hero-lead {
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+@media (min-width: 64rem) {
+  .hero-lead {
+    font-size: 2.25rem;
+  }
+}
 .whatsapp-button {
   background-image: linear-gradient(135deg, #A22486, #8a1b70);
   color: white;
