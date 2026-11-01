@@ -44,4 +44,15 @@ document.addEventListener('DOMContentLoaded', function () {
         observer2.observe(card);
     });
 
+    document.querySelectorAll('.reviews').forEach(box => {
+        const track = box.querySelector('.reviews-track');
+        box.querySelectorAll('.reviews-nav').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = track.querySelector('.review-card');
+                const step = card ? card.getBoundingClientRect().width + 20 : track.clientWidth;
+                track.scrollBy({ left: step * Number(btn.dataset.dir), behavior: 'smooth' });
+            });
+        });
+    });
+
 });
