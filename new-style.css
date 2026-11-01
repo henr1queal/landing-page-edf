@@ -520,6 +520,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
   }
+  .border-accent {
+    border-color: var(--color-accent);
+  }
   .border-black {
     border-color: var(--color-black);
   }
@@ -742,6 +745,9 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-accent {
+    color: var(--color-accent);
+  }
   .text-gray-200 {
     color: var(--color-gray-200);
   }
@@ -799,6 +805,20 @@
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:bg-accent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
