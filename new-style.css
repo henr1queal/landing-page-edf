@@ -59,7 +59,6 @@
     --default-mono-font-family: var(--font-mono);
     --color-brand: #6A0954;
     --color-accent: #A22486;
-    --color-lilac: #EADAE7;
     --color-ink: #1A1A1A;
   }
 }
@@ -422,6 +421,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -1100,6 +1102,11 @@
   .lg\:justify-between {
     @media (width >= 64rem) {
       justify-content: space-between;
+    }
+  }
+  .lg\:justify-start {
+    @media (width >= 64rem) {
+      justify-content: flex-start;
     }
   }
   .lg\:ps-20 {
