@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i style.css -o new-style.css --watch",
-    "build": "tailwindcss -i style.css -o new-style.css --minify=false"
+    "build": "tailwindcss -i style.css -o new-style.css --minify=false",
+    "postbuild": "node scripts/version-assets.mjs"
   },
   "repository": {
     "type": "git",
