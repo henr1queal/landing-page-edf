@@ -251,10 +251,14 @@
 
     <section id="inicio" class="relative text-white min-h-screen flex justify-end lg:ps-20 bg-gradient-hero">
       <div
-        class="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-20 md:py-0 md:px-0 md:mx-0 2xl:mx-auto gap-50">
-        <div class="relative z-10 text-center lg:text-left lg:w-auto animate-on-scroll">
+        class="hero-inner container mx-auto flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 py-20 md:py-0 md:px-0 md:mx-0 2xl:mx-auto gap-50">
+        <div class="absolute inset-0 z-0 lg:hidden overflow-hidden hero-bg-wrap">
+          <div class="absolute inset-0 hero-overlay z-10"></div>
           <img src="assets/kelly_christiane_personal_trainer_maceio_retrato.webp" alt="Kelly Christiane, personal trainer em Maceió"
-            width="1000" height="1597" fetchpriority="high" class="hero-portrait-mobile" />
+            width="1000" height="1597" fetchpriority="high" class="hero-bg-img" />
+        </div>
+
+        <div class="relative z-10 text-center lg:text-left lg:w-auto animate-on-scroll">
           <div>
             <h1 class="text-4xl xl:text-6xl xxl:text-7xl font-black tracking-tight text-shadow-lg text-white">
               Kelly Christiane
